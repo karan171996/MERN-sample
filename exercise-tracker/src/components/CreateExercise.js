@@ -11,7 +11,7 @@ export default function CreateExerciseComponent() {
   const [users, setUsers] = useState([]);
 
   useEffect(() => {
-    axios.get("http://localhost:5000/exercises").then((res) => {
+    axios.get("http://localhost:5000/users").then((res) => {
       if (res.data.length > 0) {
         setUsers(res.data.map((item) => item.username));
         setusername(res.data[0].username);
@@ -43,8 +43,7 @@ export default function CreateExerciseComponent() {
     axios
       .post("http://localhost:5000/exercises/add", exercise)
       .then((res) => console.log(res.data));
-    console.log("exercise", exercise);
-    // window.location = "/";
+    window.location = "/";
   };
   return (
     <div>

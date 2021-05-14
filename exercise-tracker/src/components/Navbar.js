@@ -9,7 +9,7 @@ export default function NavbarComponent() {
       <div className="collapse navbar-collapse">
         <ul className="navbar-nav mr-auto">
           <li className="navbar-item">
-            <Link to="/" className="nav-link">
+            <Link to="/edit/:id" className="nav-link">
               Exercises
             </Link>
           </li>
